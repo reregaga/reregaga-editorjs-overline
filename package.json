@@ -1,40 +1,35 @@
 {
-  "name": "@editorjs/underline",
-  "version": "1.1.0",
+  "name": "editorjs-overline-by-reregaga",
+  "version": "1.0.0",
   "keywords": [
-    "underline",
+    "overline",
     "tool",
     "plugin",
     "editor.js",
     "editorjs"
   ],
-  "description": "Inline tool for underlining text fragments",
+  "description": "Inline tool for overlining text fragments",
   "license": "MIT",
-  "repository": "https://github.com/editor-js/underline",
-  "main": "./dist/bundle.js",
+  "repository": "https://github.com/reregaga/reregaga-editorjs-overline",
+  "main": "./src/index.js",
   "scripts": {
     "build": "webpack --mode production",
     "build:dev": "webpack --mode development --watch"
   },
   "author": {
-    "name": "fajardm",
-    "email": "fajar.dwi.mawan@gmail.com"
+    "name": "reregaga",
+    "email": "wp1kky4xf@mozmail.com"
   },
   "bugs": {
-    "url": "https://github.com/editor-js/underline/issues"
+    "url": "https://github.com/reregaga/reregaga-editorjs-overline/issues"
   },
-  "homepage": "https://github.com/editor-js/underline#readme",
+  "homepage": "https://github.com/reregaga/reregaga-editorjs-overline#readme",
   "devDependencies": {
-    "@babel/core": "^7.9.6",
-    "@babel/preset-env": "^7.9.6",
-    "babel-loader": "^8.1.0",
-    "css-loader": "^3.5.3",
-    "raw-loader": "^4.0.1",
-    "style-loader": "^1.2.1",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11"
-  },
-  "dependencies": {
-    "@codexteam/icons": "^0.0.6"
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.7.3",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
   }
 }
