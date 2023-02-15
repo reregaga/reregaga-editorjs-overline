@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Overline plugin</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@2"></script>
+  <script src="bundle.js"></script>
+
+</head><body>
+
+<div id="editorjs"></div>
+
+<button id="save-button">Save</button>
+<pre id="output"></pre>
+
+<script>
+const editor = new EditorJS({
+  holder: 'editorjs',
+  inlineToolbar: true,
+  tools: { 
+    text: {
+	    class: Text,
+	    inlineToolbar: ['overline'],
+	  },
+	  overline: Overline,
+  },
+  data: {
+    "time" : 1673946961971,
+    "blocks" : [
+        {
+            "id" : "EyWeshG1aP",
+            "type" : "paragraph",
+            "data" : {"text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}
+        }
+    ]
+  },
+  onReady: () => { console.log('onReady: Editor.js is ready to work!') },
+  onChange: (api, event) => { console.log("onChange: Now I know that Editor's content changed!", event) }
+});
+
+editor.isReady
+  .then(() => { console.log('editor.isReady: Editor.js is ready to work!')
+  })
+  .catch((reason) => { console.log(`Editor.js initialization failed because of ${reason}`) });
+
+const saveButton = document.getElementById('save-button');
+const output = document.getElementById('output');
+
+saveButton.addEventListener('click', () => {
+  editor.save()
+    .then( savedData => {
+      output.innerHTML = JSON.stringify(savedData, null, 2);
+    })
+})
+</script>
+
+</body></html>

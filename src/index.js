@@ -2,21 +2,21 @@
  * Build styles
  */
  import './index.css';
- import { IconUnderline } from '@codexteam/icons'
+ //import { IconUnderline } from '@codexteam/icons'
 
  /**
  * Underline Tool for the Editor.js
  *
  * Allows to wrap inline fragment and style it somehow.
  */
-export default class Underline {
+export default class Overline {
   /**
    * Class name for term-tag
    *
    * @type {string}
    */
   static get CSS() {
-    return 'cdx-underline';
+    return 'reregaga-overline';
   };
 
   /**
@@ -37,7 +37,7 @@ export default class Underline {
      *
      * @type {string}
      */
-    this.tag = 'U';
+    this.tag = 'SPAN';
 
     /**
      * CSS classes
@@ -81,7 +81,7 @@ export default class Underline {
       return;
     }
 
-    const termWrapper = this.api.selection.findParentTag(this.tag, Underline.CSS);
+    const termWrapper = this.api.selection.findParentTag(this.tag, Overline.CSS);
 
     /**
      * If start or end of selection is in the highlighted block
@@ -102,9 +102,9 @@ export default class Underline {
     /**
      * Create a wrapper for highlighting
      */
-    const u = document.createElement(this.tag);
+    const o = document.createElement(this.tag);
 
-    u.classList.add(Underline.CSS);
+    o.classList.add(Overline.CSS);
 
     /**
      * SurroundContent throws an error if the Range splits a non-Text node with only one of its boundary points
@@ -113,13 +113,13 @@ export default class Underline {
      *
      * // range.surroundContents(span);
      */
-    u.appendChild(range.extractContents());
-    range.insertNode(u);
+    o.appendChild(range.extractContents());
+    range.insertNode(o);
 
     /**
      * Expand (add) selection to highlighted block
      */
-    this.api.selection.expandToTag(u);
+    this.api.selection.expandToTag(o);
   }
 
   /**
@@ -159,7 +159,7 @@ export default class Underline {
    * Check and change Term's state for current selection
    */
   checkState() {
-    const termTag = this.api.selection.findParentTag(this.tag, Underline.CSS);
+    const termTag = this.api.selection.findParentTag(this.tag, Overline.CSS);
 
     this.button.classList.toggle(this.iconClasses.active, !!termTag);
   }
@@ -170,18 +170,19 @@ export default class Underline {
    * @returns {string}
    */
   get toolboxIcon() {
-    return IconUnderline;
+    //return IconUnderline;
+    return '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1"><g id="surface1"><path style="fill-rule:nonzero;fill:rgb(84.705882%,84.705882%,84.705882%);fill-opacity:1;stroke-width:20;stroke-linecap:round;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:4;" d="M 72.382812 59.296875 L 166.367188 60.195312 " transform="matrix(0.1,0,0,0.1,0,0)"/><path style="fill:none;stroke-width:19;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:4;" d="M 166.367188 142.1875 C 166.367188 115.742188 145.507812 94.335938 119.804688 94.335938 C 94.101562 94.335938 73.242188 115.742188 73.242188 142.1875 C 73.242188 168.632812 94.101562 190.078125 119.804688 190.078125 C 145.507812 190.078125 166.367188 168.632812 166.367188 142.1875 Z M 166.367188 142.1875 " transform="matrix(0.1,0,0,0.1,0,0)"/></g></svg>';
   }
 
   /**
    * Sanitizer rule
    *
-   * @returns {{u: {class: string}}}
+   * @returns {{span: {class: string}}}
    */
   static get sanitize() {
     return {
-      u: {
-        class: Underline.CSS,
+      span: {
+        class: Overline.CSS,
       },
     };
   }

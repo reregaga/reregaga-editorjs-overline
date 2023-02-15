@@ -1,42 +1,36 @@
+const path = require('path');
 module.exports = {
-    entry: './src/index.js',
-    module: {
-        rules: [
+  entry: './src/index.js',
+  output: {
+    //path: __dirname + '/dist',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
+    filename: 'bundle.js',
+    library: 'Overline',
+    libraryTarget: 'umd',
+    libraryExport: 'default'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: [
             {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                use: [
-                    {
-                        loader: 'babel-loader',
-                        query: {
-                            presets: ['@babel/preset-env'],
-                        },
-                    },
-                ]
+                loader: 'babel-loader',
+                options: {
+                    presets: ['@babel/preset-env'],
+                },
             },
-            {
-                test: /\.css$/,
-                use: [
-                    'style-loader',
-                    'css-loader'
-                ]
-            },
-            {
-                test: /\.(svg)$/,
-                use: [
-                    {
-                        loader: 'raw-loader',
-                    }
-                ]
-            }
         ]
     },
-    output: {
-        path: __dirname + '/dist',
-        publicPath: '/',
-        filename: 'bundle.js',
-        library: 'Underline',
-        libraryTarget: 'umd',
-        libraryExport: 'default'
-    }
+    ]
+  }
 };

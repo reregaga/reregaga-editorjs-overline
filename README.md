@@ -1,16 +1,16 @@
 ![](https://badgen.net/badge/Editor.js/v2.0/blue)
 
-# Underline Tool
-Inline tool for underlining text fragments for the [Editor.js](https://github.com/codex-team/editor.js)
+# Overline Tool
+Inline tool for overlining text fragments for the [Editor.js](https://github.com/codex-team/editor.js)
 
-![](editorjs-underline.gif)
+![](editorjs-overline.gif)
 
 ## Installation
 
 ### Install via NPM
 
 Get the package
-
+<!--
 ```shell
 npm i --save @editorjs/underline
 ```
@@ -50,7 +50,7 @@ var editor = new EditorJS({
   // ...
   tools: {
     // ...
-    underline: Underline
+    overline: Overline
   },
 });
 ```
@@ -67,7 +67,8 @@ Underlined text will be wrapped with a `u` tag with an `cdx-underline` class.
 {
     "type" : "text",
     "data" : {
-        "text" : "Create a directory for your module, enter it and run <u class=\"cdx-underline\">npm init</u> command."
+        "text" : "Create a directory for your module, enter it and run <span class=\"reregaga-overline\">npm init</span> command."
     }
 }
 ```
+-->

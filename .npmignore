@@ -1,4 +1,5 @@
 .idea/
 src/
+docs/
 webpack.config.js
 package-lock.json
