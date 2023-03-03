@@ -1,6 +1,13 @@
-![](https://badgen.net/badge/Editor.js/v2.0/blue)
+[![Editor.js](https://badgen.net/badge/Editor.js/v2.*/blue)](https://github.com/codex-team/editor.js)
 
-![npm bundle size](https://img.shields.io/bundlephobia/min/editorjs-overline-by-reregaga) [![npm version](https://img.shields.io/npm/v/editorjs-overline-by-reregaga)](https://www.npmjs.com/package/editorjs-overline-by-reregaga) [![npm dl](https://img.shields.io/npm/dy/editorjs-overline-by-reregaga)](https://www.npmjs.com/package/editorjs-overline-by-reregaga) [![jsDelivr hits (npm)](https://img.shields.io/jsdelivr/npm/hy/editorjs-overline-by-reregaga)](https://cdn.jsdelivr.net/npm/editorjs-overline-by-reregaga@1.0.0/dist/bundle.js) ![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/editorjs-overline-by-reregaga)
+[![npm version](https://img.shields.io/npm/v/editorjs-overline-by-reregaga)](https://www.npmjs.com/package/editorjs-overline-by-reregaga)
+[![npm bundle size](https://badgen.net/bundlephobia/minzip/editorjs-overline-by-reregaga)](https://bundlephobia.com/package/editorjs-overline-by-reregaga)
+[![npm dl](https://img.shields.io/npm/dy/editorjs-overline-by-reregaga)](https://www.npmjs.com/package/editorjs-overline-by-reregaga)
+[![Snyk Vulnerabilities for npm package](https://img.shields.io/snyk/vulnerabilities/npm/editorjs-overline-by-reregaga)](https://snyk.io/advisor/npm-package/editorjs-overline-by-reregaga)
+![license](https://badgen.net/npm/license/editorjs-overline-by-reregaga)
+
+[![jsDelivr hits (npm)](https://img.shields.io/jsdelivr/npm/hy/editorjs-overline-by-reregaga)](https://www.jsdelivr.com/package/npm/editorjs-overline-by-reregaga)
+[![jsDelivr rank](https://badgen.net/jsdelivr/rank/npm/editorjs-overline-by-reregaga)](https://www.jsdelivr.com/package/npm/editorjs-overline-by-reregaga)
 
 # Overline Tool
 Inline tool for overlining text fragments for the [Editor.js](https://github.com/codex-team/editor.js)
